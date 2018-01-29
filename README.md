@@ -1,13 +1,28 @@
 # luaprotobuf
+
 Simple Lua binding on protobuf-cpp, encode/decode pb messages to/from Lua table.
 
-Requirements: 
-	1. Protobuf headers and libs.
-	2. Lua header files.
+##Requirements: 
 
-How to build: 
+1.Protobuf headers and libs.
+2.Lua header files.
+
+##How to build
+
 	make
+
+##To use your own protobuf path
+Makefile use /usr/local/include, /usr/local/lib by default for searching headers and lib files for Lua and Protobuf
+Use LUA_INC, PB_INC and PB_LIB for custom Lua, Protobuf path.
+
+	make LUA_INC=/your/include/path PB_INC=/your/include/path PB_LIB=/your/lib/path
+
+##Run test
+
 	make test
 
-To use your own protobuf path
-	make PB_INC=/your/include/path PB_LIB=/your/lib/path
+##Example 
+
+See test.lua
+
+
