@@ -1,0 +1,30 @@
+syntax = "proto3";
+package test;
+
+enum PhoneType {
+	MOBILE = 0;
+	HOME = 1;
+	WORK = 2;
+}
+
+message Test
+{
+
+	message Embed
+	{
+		uint32 code = 1;  // Error code
+		string msg = 2;  // Brief message
+		string info = 3;
+	}
+
+	uint32 a = 1;
+	repeated string b = 2;
+	repeated Embed c = 3;
+	
+	PhoneType phone_type1 = 4;
+	PhoneType phone_type2 = 5;
+	PhoneType phone_type3 = 6;
+	repeated PhoneType phone_types = 7;
+}
+
+
